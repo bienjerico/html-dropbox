@@ -168,6 +168,19 @@
     background-image: none;
 }
 
+video{
+	 position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
 
 	</style>
   </head>
@@ -212,10 +225,12 @@
         </div>
     </div>
     <div class="item">
-        <img src="https://unsplash.it/2000/1250?image=689" data-color="firebrick" alt="Second Image">
-        <div class="carousel-caption">
-            <h3>Second Image</h3>
-        </div>
+        <!-- <img src="https://unsplash.it/2000/1250?image=689" data-color="firebrick" alt="Second Image"> -->
+        <video playsinline autoplay muted loop>
+			  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+			<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+			<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+		</video>
     </div>
     <div class="item">
         <img src="https://unsplash.it/2000/1250?image=675" data-color="violet" alt="Third Image">
