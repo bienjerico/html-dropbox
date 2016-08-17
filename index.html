@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Life.Code.Style.</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="masonry-docs.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 
 
 
@@ -20,6 +22,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    *{
+    	font-family: 'Josefin Slab', serif;
+    }
 .sk-cube-grid {
   width: 60px;
   height: 60px;
@@ -87,65 +92,7 @@
             transform: scale3D(0, 0, 1);
   } 
 }
-    /*
-		.spinner {
-		  width: 50px;
-		  height: 40px;
-		  text-align: center;
-		  font-size: 10px;
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-
-		}
-
-		.spinner > div {
-		  background-color: #ffffff;
-		  height: 100%;
-		  width: 6px;
-		  display: inline-block;
-		  
-		  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-		  animation: sk-stretchdelay 1.2s infinite ease-in-out;
-		}
-
-		.spinner .rect2 {
-		  -webkit-animation-delay: -1.1s;
-		  animation-delay: -1.1s;
-		}
-
-		.spinner .rect3 {
-		  -webkit-animation-delay: -1.0s;
-		  animation-delay: -1.0s;
-		}
-
-		.spinner .rect4 {
-		  -webkit-animation-delay: -0.9s;
-		  animation-delay: -0.9s;
-		}
-
-		.spinner .rect5 {
-		  -webkit-animation-delay: -0.8s;
-		  animation-delay: -0.8s;
-		}
-
-		@-webkit-keyframes sk-stretchdelay {
-		  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
-		  20% { -webkit-transform: scaleY(1.0) }
-		}
-
-		@keyframes sk-stretchdelay {
-		  0%, 40%, 100% { 
-		    transform: scaleY(0.4);
-		    -webkit-transform: scaleY(0.4);
-		  }  20% { 
-		    transform: scaleY(1.0);
-		    -webkit-transform: scaleY(1.0);
-		  }
-		}*/
-
+ 
 		.full-screen {
   background-size: cover;
   background-position: center;
@@ -182,9 +129,115 @@ video{
   transition: 1s opacity;
 }
 
+.item-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.item-1 h1{
+	font-size: 100px;
+	/*font-weight: bold;*/
+	color: #fff;
+}
+.images-list {
+	display:inline-block; 
+	padding:5px;
+}
+/*#js-images-list {*/
+/*	margin: 0;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) */
+
+/*      line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;  
+
+}*/
+/*#js-images-list img {*/
+	  /* Just in case there are inline attributes */
+  /*width: 100% !important;
+  height: auto !important;*/
+/*	padding:5px 5px 20px 5px;
+	width: 250px;
+	background-color: #fff;
+	border-radius: 5px;*/
+/*}*/
+/* ---- grid ---- */
+
+.grid {
+  /*background: #DDD;*/
+}
+.grid-box {
+/*margin-top:50px;*/
+/*height:800px; */
+overflow-y:auto;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+  padding: 5px;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+/*    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    /*-webkit-border-radius: 10px;*/
+    /*border-radius: 10px;*/
+    background: rgba(0, 0, 0, 0.2);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /*-webkit-border-radius: 10px;*/
+    /*border-radius: 10px;*/
+    background: rgba(0, 0, 0, 0.5);
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+
 	</style>
   </head>
   <body>
+
+
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -198,31 +251,46 @@ video{
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item">
-        <img src="https://unsplash.it/2000/1250?image=397" data-color="lightblue" alt="First Image">
+        <!-- <img src="https://unsplash.it/2000/1250?image=397" data-color="lightblue" alt="First Image" class="carousel-img"> -->
+ <!--    	<div id="js-preloader-2"></div>
+ -->
+ <!-- <div class="container"> -->
+ <div class="grid-box">
+  <div class="grid">
+  <div class="grid-sizer"></div>
+  <div id="js-images-list"></div>
+<!--   <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+  </div>
+  <div class="grid-item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+  </div> -->
 
-<div class="sk-cube-grid">
-  <div class="sk-cube sk-cube1"></div>
-  <div class="sk-cube sk-cube2"></div>
-  <div class="sk-cube sk-cube3"></div>
-  <div class="sk-cube sk-cube4"></div>
-  <div class="sk-cube sk-cube5"></div>
-  <div class="sk-cube sk-cube6"></div>
-  <div class="sk-cube sk-cube7"></div>
-  <div class="sk-cube sk-cube8"></div>
-  <div class="sk-cube sk-cube9"></div>
+  </div>
 </div>
-		<!-- 	<div class="spinner">
-			  <div class="rect1"></div>
-			  <div class="rect2"></div>
-			  <div class="rect3"></div>
-			  <div class="rect4"></div>
-			  <div class="rect5"></div>
-			</div> -->
-		<!-- <div id="js-images-list"></div>  -->
+<!-- </div> -->
 
-        <div class="carousel-caption">
+
+		<!-- <div id="js-images-list" class="container"></div>  -->
+
+<!--         <div class="carousel-caption">
             <h3>First Image</h3>
-        </div>
+        </div> -->
     </div>
     <div class="item">
         <!-- <img src="https://unsplash.it/2000/1250?image=689" data-color="firebrick" alt="Second Image"> -->
@@ -231,6 +299,9 @@ video{
 			<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
 			<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
 		</video>
+		<div class="item-1">
+			<h1>Life.Code.Style.</h1>
+		</div>
     </div>
     <div class="item">
         <img src="https://unsplash.it/2000/1250?image=675" data-color="violet" alt="Third Image">
@@ -273,30 +344,70 @@ video{
 	<script>
 
 
+function preload() {
+    var result = '<div class="sk-cube-grid">';
+		result += '<div class="sk-cube sk-cube1"></div>';
+		result += '<div class="sk-cube sk-cube2"></div>';
+		result += '<div class="sk-cube sk-cube3"></div>';
+		result += '<div class="sk-cube sk-cube4"></div>';
+		result += '<div class="sk-cube sk-cube5"></div>';
+		result += '<div class="sk-cube sk-cube6"></div>';
+		result += '<div class="sk-cube sk-cube7"></div>';
+		result += '<div class="sk-cube sk-cube8"></div>';
+		result += '<div class="sk-cube sk-cube9"></div>';
+		result += '</div>';
+		return result;
+
+}
 
 
-	// $(function() {
-	// 	$("#js-images-list").hide();
-	// 	$.getJSON( "https://dl.dropboxusercontent.com/u/69645339/assets/images-data.json", function( data ) {
-	// 	  var result = "";
-	// 	  $.each( data, function( key, val ) {
-	// 		result += "<img src=\"" + val.url +"\" width=\"150\">";
-	// 	  });
-	// 	 $(".spinner").hide();
+// init Isotope
+var grid = document.querySelector('.grid');
+
+var msnry = new Masonry( grid, {
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer',
+  percentPosition: true
+});
+
+imagesLoaded( grid ).on( 'progress', function() {
+  // layout Masonry after each image loads
+  msnry.layout();
+});
+
+
+	$(function() {
+		// $("#js-preloader-2").append(preload());
+		// $("#js-images-list").hide();
+		$.getJSON( "https://dl.dropboxusercontent.com/u/69645339/assets/images-data.json", function( data ) {
+			console.log(data);
+		  var result = "";
+		  $.each( data, function( key, val ) {
+alert(key);
+		  	// $(".grid").append("<div class=\"grid-item\"><img src=\"" + val.url +"\"></div>");
+			result += "<div class=\"grid-item\"><img src=\"" + val.url +"\"  title=\"" + val.title +"\"></div>";
+		  });
+
+		 // preload(data);
+
+
+		 // $("#js-preloader-2").hide();
 		
-	// 	  $("#js-images-list").html(result);
-	// 	  $("#js-images-list").show();
-	// 	});
-	// });
+		  $("#js-images-list").html(result);
+		  // $("#js-images-list").show();
+		});
+	});
 
 
+var $gridbox = $(".grid-box");
 	var $item = $('.carousel .item'); 
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
 $item.height($wHeight); 
 $item.addClass('full-screen');
+$gridbox.height($wHeight);	
 
-$('.carousel img').each(function() {
+$('.carousel .carousel-img').each(function() {
   var $src = $(this).attr('src');
   var $color = $(this).attr('data-color');
   $(this).parent().css({
@@ -309,6 +420,7 @@ $('.carousel img').each(function() {
 $(window).on('resize', function (){
   $wHeight = $(window).height();
   $item.height($wHeight);
+	$gridbox.height($wHeight);
 });
 
 $('.carousel').carousel({interval: false});
