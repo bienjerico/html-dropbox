@@ -383,9 +383,12 @@ imagesLoaded( grid ).on( 'progress', function() {
 			console.log(data);
 		  var result = "";
 		  $.each( data, function( key, val ) {
-alert(key);
+// alert(key);
 		  	// $(".grid").append("<div class=\"grid-item\"><img src=\"" + val.url +"\"></div>");
+		  	// setTimeout(function(){ 
+
 			result += "<div class=\"grid-item\"><img src=\"" + val.url +"\"  title=\"" + val.title +"\"></div>";
+			// }, 100);
 		  });
 
 		 // preload(data);
