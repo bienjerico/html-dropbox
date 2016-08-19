@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="scotchPanels.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
 
@@ -23,6 +22,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    body {
+      background-color: #232323
+    }
 .sk-cube-grid {
   width: 60px;
   height: 60px;
@@ -176,11 +178,41 @@ video{
   display: none;
  }
 
-body {
-    animation: fadein 2s;
+
+
+.loading {
+  display: inline;
+}
+.loaded-hide {
+  overflow: hidden;
+  display: none;
+  /*opacity: 0;*/
+/*    transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;*/
+}
+.loaded-show {
+  display: inline;
+  /*opacity: 1;*/
+ /* transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;*/
+  /*    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;*/
+        animation: fadein 2s;
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -o-animation: fadein 2s; /* Opera */
+
+}
+
+/*body {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; 
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s; 
 }
 @keyframes fadein {
     from {
@@ -190,7 +222,7 @@ body {
         opacity:1;
     }
 }
-@-moz-keyframes fadein { /* Firefox */
+@-moz-keyframes fadein { 
     from {
         opacity:0;
     }
@@ -198,7 +230,7 @@ body {
         opacity:1;
     }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+@-webkit-keyframes fadein { 
     from {
         opacity:0;
     }
@@ -206,7 +238,7 @@ body {
         opacity:1;
     }
 }
-@-o-keyframes fadein { /* Opera */
+@-o-keyframes fadein { 
     from {
         opacity:0;
     }
@@ -214,10 +246,29 @@ body {
         opacity: 1;
     }
 }
+*/
+
 
 	</style>
   </head>
   <body>
+<div class="loading">
+    
+  <div class="sk-cube-grid">
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+  </div>
+
+  </div>
+<main class="loaded-hide">
+
 
     <div id="sidebar" >
          <ul>
@@ -246,25 +297,8 @@ body {
     <div class="item">
         <img src="https://unsplash.it/2000/1250?image=397" data-color="lightblue" alt="First Image">
 
-<div class="sk-cube-grid">
-  <div class="sk-cube sk-cube1"></div>
-  <div class="sk-cube sk-cube2"></div>
-  <div class="sk-cube sk-cube3"></div>
-  <div class="sk-cube sk-cube4"></div>
-  <div class="sk-cube sk-cube5"></div>
-  <div class="sk-cube sk-cube6"></div>
-  <div class="sk-cube sk-cube7"></div>
-  <div class="sk-cube sk-cube8"></div>
-  <div class="sk-cube sk-cube9"></div>
-</div>
-    <!--  <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div> -->
-    <!-- <div id="js-images-list"></div>  -->
+
+    <div id="js-images-list"></div> 
 
         <div class="carousel-caption">
             <h3>First Image</h3>
@@ -313,33 +347,29 @@ body {
 
 </section>
 
-
+</main>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script>
 $(function(){
       $('#toggle-panel').on('click', function(){
-        $('#sidebar').toggle('slide', { direction: 'left' }, 500);
+        $('#sidebar').toggle('slide', { direction: 'left' }, 300);
         $('#main-content').animate({
             'margin-left' : $('#main-content').css('margin-left') == '0px' ? '210px' : '0px'
-        }, 500);
+        }, 300);
     });
-});
 
-
-	// $(function() {
-	// 	$("#js-images-list").hide();
-	// 	$.getJSON( "https://dl.dropboxusercontent.com/u/69645339/assets/images-data.json", function( data ) {
-	// 	  var result = "";
-	// 	  $.each( data, function( key, val ) {
-	// 		result += "<img src=\"" + val.url +"\" width=\"150\">";
-	// 	  });
-	// 	 $(".spinner").hide();
+		// $("#js-images-list").hide();
+		$.getJSON( "https://dl.dropboxusercontent.com/u/69645339/assets/images-data.json", function( data ) {
+		  var result = "";
+		  $.each( data, function( key, val ) {
+			result += "<img src=\"" + val.url +"\" width=\"150\">";
+		  });
 		
-	// 	  $("#js-images-list").html(result);
-	// 	  $("#js-images-list").show();
-	// 	});
-	// });
+		  $("#js-images-list").html(result);
+		  // $("#js-images-list").show();
+		});
+});
 
 
 	var $item = $('.carousel .item'); 
@@ -366,6 +396,18 @@ $(window).on('resize', function (){
 $('.carousel').carousel({interval: false});
 
 
+$(window).on('load',function(){
+  
+    // fade in page
+
+  setTimeout(function(){
+
+  $(".loading").hide();
+  $("main").removeClass('loaded-hide').addClass('loaded-show');
+  // $("main").switchClass( "loaded-hide", "loaded-show", 1000 ,'easeInOutQuad');
+},2000);
+
+});
 
 	</script>
   </body>
